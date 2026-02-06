@@ -7,6 +7,8 @@
     <File Path="exclusion.dic" />
     <File Path="readme-nuget.md" />
     <File Path="README.md" />
+    <File Path="src/Directory.Build.props" />
+    <File Path="tests/Directory.Build.props" />
   </Folder>
   <Project Path="src/Pozitron.SharedKernel/Pozitron.SharedKernel.csproj" />
   <Project Path="tests/Pozitron.SharedKernel.Tests/Pozitron.SharedKernel.Tests.csproj" />

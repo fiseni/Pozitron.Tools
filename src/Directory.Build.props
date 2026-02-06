@@ -1,0 +1,51 @@
+<Project>
+
+  <PropertyGroup>
+    <RootNamespace>Pozitron</RootNamespace>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Symbols">
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <!--<DebugType>Embedded</DebugType>-->
+    <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Package MetaData">
+    <Authors>Fati Iseni</Authors>
+    <Company>Pozitron Group</Company>
+    <Copyright>Copyright © 2026 Pozitron Group</Copyright>
+    <Product>Pozitron Tools</Product>
+
+    <PackageProjectUrl>https://github.com/fiseni/Pozitron.Tools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/fiseni/Pozitron.Tools</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>readme-nuget.md</PackageReadmeFile>
+    <PackageIconUrl>https://pozitrongroup.com/PozitronLogo.png</PackageIconUrl>
+    <PackageIcon>pozitronicon.png</PackageIcon>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!--Missing XML comment-->
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../pozitronicon.png" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="../../readme-nuget.md" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="../../LICENSE.txt" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>
