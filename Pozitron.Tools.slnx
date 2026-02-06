@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/_meta/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Packages.props" />
+    <File Path="exclusion.dic" />
+    <File Path="readme-nuget.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Pozitron.SharedKernel/Pozitron.SharedKernel.csproj" />
+  <Project Path="tests/Pozitron.SharedKernel.Tests/Pozitron.SharedKernel.Tests.csproj" />
+</Solution>
