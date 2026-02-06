@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Tests/">
+    <Project Path="tests/Pozitron.Extensions.EntityFrameworkCore.Tests/Pozitron.Extensions.EntityFrameworkCore.Tests.csproj" Id="7edfd178-dfc3-4666-b538-2fdf9eb8303b" />
+    <Project Path="tests/Pozitron.SharedKernel.Tests/Pozitron.SharedKernel.Tests.csproj" />
+  </Folder>
   <Folder Name="/_meta/">
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
@@ -10,6 +14,6 @@
     <File Path="src/Directory.Build.props" />
     <File Path="tests/Directory.Build.props" />
   </Folder>
+  <Project Path="src/Pozitron.Extensions.EntityFrameworkCore/Pozitron.Extensions.EntityFrameworkCore.csproj" Id="abbc925c-341b-4d00-8e2c-54576232c2c8" />
   <Project Path="src/Pozitron.SharedKernel/Pozitron.SharedKernel.csproj" />
-  <Project Path="tests/Pozitron.SharedKernel.Tests/Pozitron.SharedKernel.Tests.csproj" />
 </Solution>
