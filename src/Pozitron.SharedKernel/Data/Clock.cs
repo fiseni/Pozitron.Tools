@@ -2,7 +2,7 @@
 
 public class Clock
 {
-    private static readonly object _lock = new();
+    private static readonly Lock _lock = new();
 
     private static IDateTime? _dateTimeProvider;
     public static IDateTime Provider => _dateTimeProvider ?? throw new NotImplementedException();

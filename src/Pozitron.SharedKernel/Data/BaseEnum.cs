@@ -34,10 +34,10 @@ public abstract class BaseEnum<TEnum, TValue> :
     {
         var baseType = typeof(TEnum);
         var assembly = Assembly.GetAssembly(baseType)!;
-        var pclDataAssembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(x => x.FullName != null && x.FullName.Contains("Pozitron.Data"));
+        var pclDataAssembly = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName != null && x.FullName.Contains("Pozitron."));
 
-        List<Assembly> assemblies = pclDataAssembly != null && pclDataAssembly.FullName != assembly.FullName
-            ? [assembly, pclDataAssembly]
+        List<Assembly> assemblies = pclDataAssembly.Any()
+            ? [assembly, ..pclDataAssembly]
             : [assembly];
 
         return assemblies
@@ -56,9 +56,7 @@ public abstract class BaseEnum<TEnum, TValue> :
 
     protected BaseEnum(TValue value, string name)
     {
-        if (name is null) throw new ArgumentNullException(nameof(name));
-        if (string.IsNullOrEmpty(name)) throw new ArgumentException($"Required input was empty.", nameof(name));
-
+        ArgumentException.ThrowIfNullOrEmpty(name, nameof(name));
         Value = value;
         Name = name;
     }
