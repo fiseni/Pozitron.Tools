@@ -34,10 +34,10 @@ public abstract class BaseEnum<TEnum, TValue> :
     {
         var baseType = typeof(TEnum);
         var assembly = Assembly.GetAssembly(baseType)!;
-        var pclDataAssembly = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName != null && x.FullName.Contains("Pozitron."));
+        var pozAssemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName != null && x.FullName.Contains("Pozitron."));
 
-        List<Assembly> assemblies = pclDataAssembly.Any()
-            ? [assembly, ..pclDataAssembly]
+        List<Assembly> assemblies = pozAssemblies.Any()
+            ? [assembly, .. pozAssemblies]
             : [assembly];
 
         return assemblies
