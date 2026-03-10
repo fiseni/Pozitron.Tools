@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
-namespace Pozitron.SharedKernel.Data;
+namespace Pozitron.SharedKernel;
 
 public abstract class BaseEnum<TEnum> :
     BaseEnum<TEnum, int>

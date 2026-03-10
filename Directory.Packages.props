@@ -6,6 +6,10 @@
   
   <ItemGroup Label="Package dependencies NET 10">
     <PackageVersion Include="Pozitron.QuerySpecification" Version="11.4.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.2" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.2" />
+    <PackageVersion Include="MediatR" Version="[12.5.0]" />
   </ItemGroup>
 
   <ItemGroup Label="Test projects dependencies">

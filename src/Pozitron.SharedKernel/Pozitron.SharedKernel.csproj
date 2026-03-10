@@ -18,6 +18,7 @@
   
   <ItemGroup>
     <PackageReference Include="Pozitron.QuerySpecification" />
+    <PackageReference Include="MediatR" />
   </ItemGroup>
 
 </Project>
