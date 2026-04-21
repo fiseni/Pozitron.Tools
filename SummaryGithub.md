@@ -3,21 +3,21 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/21/2026 - 10:56:09 |
+| Generated on: | 04/21/2026 - 13:12:36 |
 | Parser: | MultiReport (2x OpenCover) |
 | Assemblies: | 2 |
 | Classes: | 19 |
 | Files: | 17 |
-| **Line coverage:** | 0% (0 of 327) |
+| **Line coverage:** | 0% (0 of 319) |
 | Covered lines: | 0 |
-| Uncovered lines: | 327 |
-| Coverable lines: | 327 |
-| Total lines: | 844 |
-| **Branch coverage:** | 0% (0 of 234) |
+| Uncovered lines: | 319 |
+| Coverable lines: | 319 |
+| Total lines: | 838 |
+| **Branch coverage:** | 0% (0 of 232) |
 | Covered branches: | 0 |
-| Total branches: | 234 |
+| Total branches: | 232 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 7_24718536781 |
+| Tag: | 12_24724288185 |
 
 </details>
 
@@ -27,7 +27,7 @@
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
 |**Pozitron.Extensions.EntityFrameworkCore**|**0%**|**0%**|
-|Microsoft.EntityFrameworkCore.Metadata.Builders.PropertyBuilderExtensions|0%|0%|
+|Microsoft.EntityFrameworkCore.Metadata.Builders.BaseEnumExtensions|0%|0%|
 |Pozitron.Extensions.EntityFrameworkCore.BaseEnumConverter`3|0%||
 |Pozitron.Extensions.EntityFrameworkCore.ChangeTrackerExtensions|0%|0%|
 |Pozitron.Extensions.EntityFrameworkCore.DbContextExtensions|0%|0%|
@@ -43,8 +43,8 @@
 |:---|---:|---:|
 |**Pozitron.SharedKernel**|**0%**|**0%**|
 |Pozitron.SharedKernel.AppException|0%||
-|Pozitron.SharedKernel.AuditableEntity|0%|0%|
-|Pozitron.SharedKernel.BaseEntity`1|0%|0%|
+|Pozitron.SharedKernel.AuditableEntity|0%||
+|Pozitron.SharedKernel.BaseEntity`1|0%||
 |Pozitron.SharedKernel.BaseEnum`1|0%||
 |Pozitron.SharedKernel.BaseEnum`2|0%|0%|
 |Pozitron.SharedKernel.BaseEnumExtensions|0%|0%|
