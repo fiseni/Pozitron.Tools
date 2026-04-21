@@ -1,8 +1,8 @@
 <img align="left" src="logo.png" width="120" height="120">
 
 &nbsp;
-[![SharedKernel](https://img.shields.io/nuget/v/Pozitron.SharedKernel.svg)](https://www.nuget.org/packages/Pozitron.SharedKernel)
-[![Extensions.EFCore](https://img.shields.io/nuget/v/Pozitron.Extensions.EntityFrameworkCore.svg)](https://www.nuget.org/packages/Pozitron.Extensions.EntityFrameworkCore)
+[![nuget](https://img.shields.io/nuget/v/Pozitron.SharedKernel?label=SharedKernel)](https://www.nuget.org/packages/Pozitron.SharedKernel)
+[![nuget](https://img.shields.io/nuget/v/Pozitron.Extensions.EntityFrameworkCore?label=Extensions.EFCore)](https://www.nuget.org/packages/Pozitron.Extensions.EntityFrameworkCore)
 
 &nbsp; [![Full Build](https://github.com/fiseni/Pozitron.Tools/actions/workflows/build.yml/badge.svg)](https://github.com/fiseni/Pozitron.Tools/actions/workflows/build.yml)
 
