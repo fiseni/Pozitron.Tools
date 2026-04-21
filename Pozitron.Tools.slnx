@@ -7,19 +7,23 @@
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
-    <File Path="clean.sh" />
     <File Path="CODE_OF_CONDUCT.md" />
-    <File Path="coverage.sh" />
-    <File Path="Directory.Packages.props" />
     <File Path="exclusion.dic" />
     <File Path="LICENSE.txt" />
     <File Path="nuget.config" />
     <File Path="readme-nuget.md" />
     <File Path="README.md" />
+  </Folder>
+  <Folder Name="/_meta/props/">
+    <File Path="Directory.Packages.props" />
     <File Path="src/Directory.Build.props" />
     <File Path="src/ProjectMetadata.props" />
     <File Path="src/ProjectMetadata.targets" />
     <File Path="tests/Directory.Build.props" />
+  </Folder>
+  <Folder Name="/_meta/scripts/">
+    <File Path="clean.sh" />
+    <File Path="coverage.sh" />
   </Folder>
   <Folder Name="/_meta/workflows/">
     <File Path=".github/workflows/build.yml" />
