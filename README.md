@@ -4,7 +4,7 @@
 [![SharedKernel](https://img.shields.io/nuget/v/Pozitron.SharedKernel.svg)](https://www.nuget.org/packages/Pozitron.SharedKernel)
 [![Extensions.EFCore](https://img.shields.io/nuget/v/Pozitron.Extensions.EntityFrameworkCore.svg)](https://www.nuget.org/packages/Pozitron.Extensions.EntityFrameworkCore)
 
-&nbsp; [![Full Build](https://github.com/fiseni/Tools/actions/workflows/build.yml/badge.svg)](https://github.com/fiseni/Tools/actions/workflows/build.yml)
+&nbsp; [![Full Build](https://github.com/fiseni/Pozitron.Tools/actions/workflows/build.yml/badge.svg)](https://github.com/fiseni/Pozitron.Tools/actions/workflows/build.yml)
 
 &nbsp; [![Coverage](https://tools.fiseni.com/badge_combined.svg)](https://tools.fiseni.com)
 
