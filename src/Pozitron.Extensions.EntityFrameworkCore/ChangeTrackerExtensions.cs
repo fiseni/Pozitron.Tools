@@ -22,9 +22,9 @@ public static class ChangeTrackerExtensions
     public static bool IsAddedModifiedDeleted(this EntityEntry entry) =>
         entry.State == EntityState.Added ||
         entry.State == EntityState.Deleted ||
-        (entry.State == EntityState.Modified ||
-         entry.References.Any(r => r.TargetEntry is not null &&
+        entry.State == EntityState.Modified ||
+        entry.References.Any(r => r.TargetEntry is not null &&
                                    r.TargetEntry.Metadata.IsOwned() &&
                                    (r.TargetEntry.State == EntityState.Added ||
-                                    r.TargetEntry.State == EntityState.Modified)));
+                                    r.TargetEntry.State == EntityState.Modified));
 }
