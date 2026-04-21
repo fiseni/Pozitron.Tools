@@ -3,16 +3,28 @@
     <Project Path="tests/Pozitron.Extensions.EntityFrameworkCore.Tests/Pozitron.Extensions.EntityFrameworkCore.Tests.csproj" Id="7edfd178-dfc3-4666-b538-2fdf9eb8303b" />
     <Project Path="tests/Pozitron.SharedKernel.Tests/Pozitron.SharedKernel.Tests.csproj" />
   </Folder>
-  <Folder Name="/_meta/">
+  <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
+    <File Path="clean.sh" />
+    <File Path="CODE_OF_CONDUCT.md" />
+    <File Path="coverage.sh" />
     <File Path="Directory.Packages.props" />
     <File Path="exclusion.dic" />
+    <File Path="LICENSE.txt" />
+    <File Path="nuget.config" />
     <File Path="readme-nuget.md" />
     <File Path="README.md" />
     <File Path="src/Directory.Build.props" />
+    <File Path="src/ProjectMetadata.props" />
+    <File Path="src/ProjectMetadata.targets" />
     <File Path="tests/Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Solution Items/workflows/">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/ci.yml" />
+    <File Path=".github/workflows/release.yml" />
   </Folder>
   <Project Path="src/Pozitron.Extensions.EntityFrameworkCore/Pozitron.Extensions.EntityFrameworkCore.csproj" Id="abbc925c-341b-4d00-8e2c-54576232c2c8" />
   <Project Path="src/Pozitron.SharedKernel/Pozitron.SharedKernel.csproj" />
