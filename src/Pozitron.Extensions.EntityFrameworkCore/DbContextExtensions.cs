@@ -62,7 +62,7 @@ public static class DbContextExtensions
         foreach (var entry in entries)
         {
             var entity = entry.Entity;
-            if (!entity.Events.Any()) continue;
+            if (entity.Events.Count == 0) continue;
 
             var events = entity.Events.ToList();
             entity.ClearDomainEvents();

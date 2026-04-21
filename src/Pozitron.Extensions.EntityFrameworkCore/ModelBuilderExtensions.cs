@@ -130,13 +130,16 @@ public static class ModelBuilderExtensions
             .GetMethod(nameof(GetSoftDeleteFilter), BindingFlags.NonPublic | BindingFlags.Static)!
             .MakeGenericMethod(entityData.ClrType);
 
-        var filter = methodToCall.Invoke(null, Array.Empty<object>());
+        var filter = methodToCall.Invoke(null, Array.Empty<object>()) as LambdaExpression;
 
-        entityData.SetQueryFilter((LambdaExpression?)filter);
-        entityData.AddIndex(entityData.FindProperty(nameof(ISoftDelete.IsDeleted))!);
+        if (filter is not null)
+        {
+            entityData.SetQueryFilter(filter);
+            entityData.AddIndex(entityData.FindProperty(nameof(ISoftDelete.IsDeleted))!);
+        }
     }
 
-    private static LambdaExpression GetSoftDeleteFilter<TEntity>() where TEntity : class, ISoftDelete
+    private static Expression<Func<TEntity, bool>> GetSoftDeleteFilter<TEntity>() where TEntity : class, ISoftDelete
     {
         Expression<Func<TEntity, bool>> filter = x => !x.IsDeleted;
         return filter;

@@ -16,8 +16,8 @@ public abstract class BaseEntity<T> : IEntity<T>, IAuditableEntity, IDomainEvent
     public string? AuditModifiedByUserId { get; private set; }
     public string? AuditModifiedByUsername { get; private set; }
 
-    private readonly List<DomainEvent> _events = new();
-    public IEnumerable<DomainEvent> Events => _events.AsEnumerable();
+    public IReadOnlyList<DomainEvent> Events => _events;
+    private readonly List<DomainEvent> _events = [];
 
     public void ClearDomainEvents() => _events.Clear();
     public void RegisterEvent(DomainEvent domainEvent) => _events.Add(domainEvent);

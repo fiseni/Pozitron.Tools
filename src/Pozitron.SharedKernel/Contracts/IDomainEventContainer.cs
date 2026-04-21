@@ -2,7 +2,7 @@
 
 public interface IDomainEventContainer
 {
-    public IEnumerable<DomainEvent> Events { get; }
+    IReadOnlyList<DomainEvent> Events { get; }
     void RegisterEvent(DomainEvent domainEvent);
     void ClearDomainEvents();
 }
