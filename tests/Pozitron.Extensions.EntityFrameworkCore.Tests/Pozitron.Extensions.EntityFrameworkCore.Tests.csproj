@@ -1,4 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="MartinCostello.SqlLocalDb" />
+    <PackageReference Include="Testcontainers.MsSql" />
+    <PackageReference Include="Respawn" />
+    <PackageReference Include="Verify.EntityFramework" />
+  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\..\src\Pozitron.Extensions.EntityFrameworkCore\Pozitron.Extensions.EntityFrameworkCore.csproj" />
