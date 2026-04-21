@@ -1,4 +1,4 @@
-name: Release to Nuget
+name: Release to Nuget SharedKernel
 
 on: 
   workflow_dispatch:

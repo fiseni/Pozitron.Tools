@@ -1,4 +1,4 @@
-name: Release to Nuget
+name: Release to Nuget Extensions EntityFrameworkCore
 
 on: 
   workflow_dispatch:
