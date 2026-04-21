@@ -20,20 +20,5 @@ public abstract class BaseEntity<T> : IEntity<T>, IAuditableEntity, IDomainEvent
     public IEnumerable<DomainEvent> Events => _events.AsEnumerable();
 
     public void ClearDomainEvents() => _events.Clear();
-
     public void RegisterEvent(DomainEvent domainEvent) => _events.Add(domainEvent);
-
-    public void UpdateCreateInfo(DateTimeOffset now, ICurrentUser currentUser)
-    {
-        AuditCreatedTime = now;
-        AuditCreatedByUserId = currentUser?.UserId;
-        AuditCreatedByUsername = currentUser?.Username;
-    }
-
-    public void UpdateModifyInfo(DateTimeOffset now, ICurrentUser currentUser)
-    {
-        AuditModifiedTime = now;
-        AuditModifiedByUserId = currentUser?.UserId;
-        AuditModifiedByUsername = currentUser?.Username;
-    }
 }
