@@ -24,7 +24,8 @@
   <Folder Name="/Solution Items/workflows/">
     <File Path=".github/workflows/build.yml" />
     <File Path=".github/workflows/ci.yml" />
-    <File Path=".github/workflows/release.yml" />
+    <File Path=".github/workflows/release-extensions-efcore.yml" />
+    <File Path=".github/workflows/release-sharedkernel.yml" />
   </Folder>
   <Project Path="src/Pozitron.Extensions.EntityFrameworkCore/Pozitron.Extensions.EntityFrameworkCore.csproj" Id="abbc925c-341b-4d00-8e2c-54576232c2c8" />
   <Project Path="src/Pozitron.SharedKernel/Pozitron.SharedKernel.csproj" />

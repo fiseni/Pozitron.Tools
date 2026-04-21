@@ -1,0 +1,27 @@
+name: Release to Nuget
+
+on: 
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: contains(github.event.release.tag_name, 'extensions-efcore-v')
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.x
+    - name: Build
+      run: dotnet build --configuration Release
+    - name: Test
+      run: dotnet test --configuration Release --no-build --no-restore
+    - name: Pack
+      run: dotnet pack --configuration Release --no-build --no-restore --output .
+    - name: Push to NuGet
+      run: dotnet nuget push "Pozitron.Extensions.EntityFrameworkCore.*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
