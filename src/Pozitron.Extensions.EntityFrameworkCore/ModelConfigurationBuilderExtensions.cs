@@ -4,12 +4,12 @@ namespace Pozitron.Extensions.EntityFrameworkCore;
 
 public static class ModelConfigurationBuilderExtensions
 {
-    public static void ConfigureCustomConventions(this ModelConfigurationBuilder configurationBuilder)
+    public static void ConfigurePozitronConventions(this ModelConfigurationBuilder configurationBuilder)
     {
         configurationBuilder.ConfigureBaseEnums();
 
         configurationBuilder.Properties<string>().HaveMaxLength(250);
-        configurationBuilder.Properties<decimal>().HavePrecision(18, 10);
+        configurationBuilder.Properties<decimal>().HavePrecision(18, 2);
     }
 
     public static void ConfigureBaseEnums(this ModelConfigurationBuilder configurationBuilder)
@@ -34,7 +34,8 @@ public static class ModelConfigurationBuilderExtensions
 
             var converterType = typeof(BaseEnumConverter<,,>).MakeGenericType(propertyType, baseType, keyType);
 
-            configurationBuilder.Properties(propertyType)
+            configurationBuilder
+                .Properties(propertyType)
                 .HaveConversion(converterType);
         }
     }

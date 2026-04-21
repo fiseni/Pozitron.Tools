@@ -13,14 +13,18 @@ public static class DbContextExtensions
 
         var now = dateTime.Now;
 
-        foreach (var addedEntry in addedEntries)
+        foreach (var entry in addedEntries)
         {
-            addedEntry.Entity.UpdateCreateInfo(now, currentUser);
+            entry.CurrentValues[nameof(IAuditableEntity.AuditCreatedTime)] = now;
+            entry.CurrentValues[nameof(IAuditableEntity.AuditCreatedByUserId)] = currentUser.UserId;
+            entry.CurrentValues[nameof(IAuditableEntity.AuditCreatedByUsername)] = currentUser.Username;
         }
 
-        foreach (var modifiedEntry in modifiedEntries)
+        foreach (var entry in modifiedEntries)
         {
-            modifiedEntry.Entity.UpdateModifyInfo(now, currentUser);
+            entry.CurrentValues[nameof(IAuditableEntity.AuditModifiedTime)] = now;
+            entry.CurrentValues[nameof(IAuditableEntity.AuditModifiedByUserId)] = currentUser.UserId;
+            entry.CurrentValues[nameof(IAuditableEntity.AuditCreatedByUsername)] = currentUser.Username;
         }
     }
 
@@ -44,7 +48,7 @@ public static class DbContextExtensions
             {
                 if (ownedEntry.Metadata.IsInOwnershipPath(entry.Metadata.ContainingEntityType))
                 {
-                    ownedEntry.CurrentValues.SetValues(ownedEntry.OriginalValues);
+                    //ownedEntry.CurrentValues.SetValues(ownedEntry.OriginalValues);
                     ownedEntry.State = EntityState.Unchanged;
                 }
             }
@@ -53,10 +57,13 @@ public static class DbContextExtensions
 
     public static async Task PublishDomainEvents(this DbContext dbContext, IMediator mediator)
     {
-        var entities = dbContext.ChangeTracker.Entries<IDomainEventContainer>().Select(x => x.Entity).Where(x => x.Events.Any()).ToList();
+        var entries = dbContext.ChangeTracker.Entries<IDomainEventContainer>();
 
-        foreach (var entity in entities)
+        foreach (var entry in entries)
         {
+            var entity = entry.Entity;
+            if (!entity.Events.Any()) continue;
+
             var events = entity.Events.ToList();
             entity.ClearDomainEvents();
 

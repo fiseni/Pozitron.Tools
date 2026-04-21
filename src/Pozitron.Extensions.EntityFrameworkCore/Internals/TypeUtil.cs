@@ -26,7 +26,7 @@ internal static class TypeUtil
     {
         var currentType = objectType.BaseType;
 
-        if (currentType == null)
+        if (currentType is null)
         {
             return null;
         }

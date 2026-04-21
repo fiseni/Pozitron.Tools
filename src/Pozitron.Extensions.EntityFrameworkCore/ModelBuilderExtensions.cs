@@ -5,7 +5,7 @@ namespace Pozitron.Extensions.EntityFrameworkCore;
 
 public static class ModelBuilderExtensions
 {
-    public static void ConfigureCustomRules(this ModelBuilder modelBuilder, DbContext dbContext, Assembly? assembly = null)
+    public static void ConfigurePozitronRules(this ModelBuilder modelBuilder, DbContext dbContext, Assembly? assembly = null)
     {
         // The order is important
 
@@ -118,12 +118,10 @@ public static class ModelBuilderExtensions
         entityType.SetIsTemporal(true);
 
         var periodStart = entityType.FindDeclaredProperty("PeriodStart");
-        if (periodStart is not null)
-            periodStart.SetColumnName("PeriodStart");
+        periodStart?.SetColumnName("PeriodStart");
 
         var periodEnd = entityType.FindDeclaredProperty("PeriodEnd");
-        if (periodEnd is not null)
-            periodEnd.SetColumnName("PeriodEnd");
+        periodEnd?.SetColumnName("PeriodEnd");
     }
 
     private static void AddSoftDeleteQueryFilter(this IMutableEntityType entityData)
