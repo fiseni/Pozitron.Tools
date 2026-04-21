@@ -3,25 +3,28 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
-  
   <ItemGroup Label="Package dependencies NET 10">
-    <PackageVersion Include="Pozitron.QuerySpecification" Version="11.4.0" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.2" />
-    <PackageVersion Include="MediatR" Version="[12.5.0]" />
+    <PackageVersion Include="Pozitron.QuerySpecification" Version="11.5.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.6" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.6" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.6" />
+    <PackageVersion Include="MediatR" Version="14.1.0" />
+    <PackageVersion Include="MediatR.Contracts" Version="2.0.1" />
   </ItemGroup>
-
   <ItemGroup Label="Test projects dependencies">
-    <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
+    <PackageVersion Include="Verify" Version="31.16.1" />
+    <PackageVersion Include="Verify.XunitV3" Version="31.16.1" />
+    <PackageVersion Include="Verify.EntityFramework" Version="15.1.0" />
+    <PackageVersion Include="MartinCostello.SqlLocalDb" Version="6.0.0" />
+    <PackageVersion Include="Testcontainers.MsSql" Version="4.11.0" />
+    <PackageVersion Include="Respawn" Version="7.0.0" />
+    <PackageVersion Include="AutoFixture" Version="4.18.1" />
     <PackageVersion Include="FluentAssertions" Version="[7.2.0]" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
-    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="coverlet.collector" Version="10.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
-    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
   </ItemGroup>
-  
   <ItemGroup Label="Transitive Updates">
   </ItemGroup>
-  
 </Project>
