@@ -389,3 +389,6 @@ FodyWeavers.xsd
 # Verify
 *.received.*
 *.received/
+
+# Aider
+.aider*

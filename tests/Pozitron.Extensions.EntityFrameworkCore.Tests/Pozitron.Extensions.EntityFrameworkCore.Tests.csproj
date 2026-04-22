@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <PackageReference Include="MartinCostello.SqlLocalDb" />
     <PackageReference Include="Testcontainers.MsSql" />
     <PackageReference Include="Respawn" />
     <PackageReference Include="Verify.EntityFramework" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
   </ItemGroup>
   
   <ItemGroup>

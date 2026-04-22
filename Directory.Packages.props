@@ -12,6 +12,7 @@
     <PackageVersion Include="MediatR.Contracts" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup Label="Test projects dependencies">
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.6" />
     <PackageVersion Include="Verify" Version="31.16.1" />
     <PackageVersion Include="Verify.XunitV3" Version="31.16.1" />
     <PackageVersion Include="Verify.EntityFramework" Version="15.1.0" />
