@@ -3,33 +3,33 @@
 
 |||
 |:---|:---|
-| Generated on: | 04/21/2026 - 13:12:36 |
+| Generated on: | 04/22/2026 - 12:10:53 |
 | Parser: | MultiReport (2x OpenCover) |
 | Assemblies: | 2 |
 | Classes: | 19 |
 | Files: | 17 |
-| **Line coverage:** | 0% (0 of 319) |
-| Covered lines: | 0 |
-| Uncovered lines: | 319 |
+| **Line coverage:** | 6.5% (21 of 319) |
+| Covered lines: | 21 |
+| Uncovered lines: | 298 |
 | Coverable lines: | 319 |
 | Total lines: | 838 |
-| **Branch coverage:** | 0% (0 of 232) |
-| Covered branches: | 0 |
+| **Branch coverage:** | 10.3% (24 of 232) |
+| Covered branches: | 24 |
 | Total branches: | 232 |
 | **Method coverage:** | [Feature is only available for sponsors](https://reportgenerator.io/pro) |
-| Tag: | 12_24724288185 |
+| Tag: | 13_24777468978 |
 
 </details>
 
 ## Coverage
-<details><summary>Pozitron.Extensions.EntityFrameworkCore - 0%</summary>
+<details><summary>Pozitron.Extensions.EntityFrameworkCore - 10.3%</summary>
 
 |**Name**|**Line**|**Branch**|
 |:---|---:|---:|
-|**Pozitron.Extensions.EntityFrameworkCore**|**0%**|**0%**|
+|**Pozitron.Extensions.EntityFrameworkCore**|**10.3%**|**16.4%**|
 |Microsoft.EntityFrameworkCore.Metadata.Builders.BaseEnumExtensions|0%|0%|
 |Pozitron.Extensions.EntityFrameworkCore.BaseEnumConverter`3|0%||
-|Pozitron.Extensions.EntityFrameworkCore.ChangeTrackerExtensions|0%|0%|
+|Pozitron.Extensions.EntityFrameworkCore.ChangeTrackerExtensions|100%|75%|
 |Pozitron.Extensions.EntityFrameworkCore.DbContextExtensions|0%|0%|
 |Pozitron.Extensions.EntityFrameworkCore.IQueryableExtensions|0%|0%|
 |Pozitron.Extensions.EntityFrameworkCore.ModelBuilderExtensions|0%|0%|
